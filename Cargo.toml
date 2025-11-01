@@ -1,0 +1,21 @@
+[package]
+name = "dualhash"
+version = "0.1.0"
+edition = "2021"
+authors = ["Anonymous"]
+license = "MIT OR Apache-2.0"
+description = "DualHash: A conservative combined hash function (SHA3-512 || BLAKE3-512) for higher security margins."
+repository = "https://github.com/TooNsmk/dualhash"
+readme = "README.md"
+keywords = ["hash", "crypto", "sha3", "blake3"]
+categories = ["cryptography"]
+
+[dependencies]
+sha3 = "0.10"
+blake3 = "1.4"
+hex = "0.4"
+clap = { version = "4", optional = true }
+
+[features]
+default = ["cli"]
+cli = ["clap"]
